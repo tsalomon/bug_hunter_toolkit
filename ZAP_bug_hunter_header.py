@@ -42,12 +42,12 @@ header = {	"USERNAME": "".join([SITE, "-", HANDLE]), \
 def sendingRequest(msg, initiator, helper):
 
 	# Most common configuration
-	msg.getRequestHeader().addHeader(HEADER, header["USERNAME"]); 
-	msg.getRequestHeader().addHeader(HEADER, header["TOOLVV"]); 
+	msg.getRequestHeader().setHeader(HEADER, header["USERNAME"]); 
+	msg.getRequestHeader().setHeader(HEADER, header["TOOLVV"]); 
 
-	msg.getRequestHeader().addHeader(HEADER, header["EMAIL"]); 
-	msg.getRequestHeader().addHeader(HEADER, header["UID"]);
-	msg.getRequestHeader().addHeader(HEADER, header["TOOL"]); 
+	msg.getRequestHeader().setHeader(HEADER, header["EMAIL"]); 
+	msg.getRequestHeader().setHeader(HEADER, header["UID"]);
+	msg.getRequestHeader().setHeader(HEADER, header["TOOL"]); 
 
 	# Debugging can be done using print like this
     	print('sendingRequest called with headers =' + msg.getRequestHeader().getHeadersAsString())
